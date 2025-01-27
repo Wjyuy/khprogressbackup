@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            점유율 0.8
+            <!-- 전체 크기 1을 기준으로 0.8만큼 차지함(기본=1) -->
+            <meter value="0.8"></meter>
+        </li>
+        <li>
+            사용량 64%
+            <!-- 전체 크기 100을 기준으로 64만큼 차지함 -->
+            <meter value="64" max="100"></meter>
+        </li>
+        <li>
+            트래픽 초과
+            <!-- 전체 크기 10240을 기준으로 9216만큼 차지함-->
+            <!-- high 값을 value값이 초과시 색상 변화됨 -->
+            <!-- <meter value="9216" max="10240" high="8300"></meter> -->
+
+            <!-- min보다 value값이 작을때는 출력 안됨 -->
+            <!-- <meter value="1000" min="1024" max="10240" high="8300"></meter> -->
+
+            <!-- low 값보다 value값이 작을시 색상 변화됨 -->
+            <meter value="2000" min="1024" max="10240" low="2048" high="8300"></meter>
+        </li>
+    </ul>
+</body>
+</html>

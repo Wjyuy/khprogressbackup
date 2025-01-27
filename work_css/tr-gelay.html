@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ex{
+            width: 500px;
+            height: 150px;
+            margin: 0 auto;
+            border: 1px solid #aaa;
+            border-radius: 30px;
+            padding: 20px;
+        }
+        .box{
+            font-size: 12px;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            background-color: #eee;
+        }
+        .box p{
+            text-align: center;
+            padding-top: 4px;
+        }
+        #no-delay{
+            border: 1px solid #ff6a00;
+            transition-duration: 3s;
+        }
+        #delay{
+            transition-duration: 3s;
+            border: 1px solid #006aff;
+            /* 1초동안 지연 */
+            transition-delay: 1s;
+        }
+        /* 아이디 마우스 올렸을때 이벤트를 박스 클래스 2개 적용 */
+        #ex:hover .box{
+        /* #ex:hover{ -> 안 됨 */
+        /* .box:hover{ */
+            transform: rotate(720deg);
+            margin-left: 420px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ex">
+        <div id="no-delay" class="box">
+            <p>no-delay</p>
+        </div>
+        <div id="delay" class="box">
+            <p>delay</p>
+        </div>
+    </div>
+</body>
+</html>

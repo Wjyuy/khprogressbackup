@@ -1,0 +1,65 @@
+.container{
+    width: 960px;
+}
+header{
+    height: 280px;
+    /* 현재 외부 스타일 폴더이므로 ../먼저 와야 폴더가 불러와진다 */
+    background-image: url("../images/bg.png");
+    /* 헤더 안에 어울리도록 배치 */
+    position: relative;
+}
+header h1{
+    font-size: 3em;
+    color: #ffc;
+    /* 오른쪽 아래 배치 */
+    right: 20px;
+    bottom: 70px;
+    /* 절대적인 위치로 브라우저 기준 */
+    position: absolute;
+}
+header h2{
+    font-size: 2em;
+    color: #ff0;
+    /* 오른쪽 아래 배치 */
+    right: 20px;
+    bottom: 30px;
+    /* 절대적인 위치로 브라우저 기준 */
+    position: absolute;
+}
+.navi{
+    width: 960px;
+    background: #271717;
+    height: 150px;
+    /* 음수값으로 위에 배경하고 거의 밀착한다.(margin 음수 가능) */
+    margin-top: -15px;
+}
+.navi a{
+    color: #fff;
+    /* 링크 밑줄 제거 */
+    text-decoration: none;
+    padding: 10px 5px 5px 35px;
+    /* a태그의 각각의 패딩이 적용됨(display까지해줘야) */
+    display: block;
+}
+.navi a:hover{
+    color: #fc0;
+}
+.navi ul{
+    /* 불릿 제거 */
+    list-style: none;
+} 
+.content{
+    width: 720px;
+    /* 왼쪽으로 배치되면서 밑에 있는 부분이 오른쪽으로 올라옴 */
+    float: left;
+    padding-left:10px ;
+}
+footer{
+    /* float :left; 속성에 영향을 안 받음 */
+    /* clear: left; */
+    clear: both;
+    background-color: #030;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}

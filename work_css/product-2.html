@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:#faf3d1;
+        }
+        header{
+            background-color: #e0a800;
+        }
+        footer{
+            width: 960px;
+            height: 100px;
+            background-color:#e0a800;
+        }
+        footer div p{
+            color: white;
+            text-align: center;
+            padding-top:50px ;
+
+        }
+        h1{
+            color: white;
+            text-align: center;
+            padding-top:20px ;
+        }
+        section{
+            width: 720px;
+            border-radius: 10px;
+            background: white;
+            margin-left: 100px;
+            margin-top: 30px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 1px#ddd;
+        }
+        input{
+            margin: 10px;
+            margin-left: 0px;
+            border-radius: 10px;
+            border:1px solid #b9b9b9;
+            width: 700px;
+            padding: 10px;
+        }
+        button{
+            margin-top: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+            border: 1px solid #c8c8c8;
+            background: #e0a800;
+            width: 720px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <header>
+            <h1>상품 판매</h1>
+        </header>
+        <div class="container">
+            <section >
+                <h2>로그인</h2>
+                아이디<br>
+                <input type="text" placeholder="아이디를 입력하세요"><br>
+                비밀번호<br>
+                <input type="password" placeholder="비밀번호를 입력하세요"><br>
+                <button type="submit">로그인</button>
+            </section>
+            <section>
+                <h2>회원정보</h2>
+                이름<br>
+                <input type="text" placeholder="이름을 입력하세요"><br>
+                이메일<br>
+                <input type="text" placeholder="이메일을 입력하세요"><br>
+                전화번호<br>
+                <input type="text" placeholder="전화번호를 입력하세요"><br>
+                <button type="submit">정보수정</button>
+            </section>
+            <section >
+                <h2>상품 등록</h2>
+                상품명<br>
+                <input type="text" placeholder="상품명을 입력하세요"><br>
+                가격<br>
+                <input type="text" placeholder="상품 가격을 입력하세요"><br>
+                <button type="submit">상품 등록</button>
+            </section>
+            <section>
+                <h2>점포 등록</h2>
+                점포명<br>
+                <input type="text" placeholder="점포명을 입력하세요"><br>
+                위치<br>
+                <input type="text" placeholder="위치를 입력하세요"><br>
+                <button type="submit">점포등록</button>
+            </section>
+        </div>
+        <footer>
+            <div>
+                <p>
+                    &copy; 2025 상품 판매
+                </p>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>등록정보</legend>
+            참여인원<small>(최대10명)</small>
+            <!-- 0~10 사이의 숫자만 입력된다 -->
+            <!-- type="number" : 스핀으로 숫자 증감하거나 숫자만 입력 -->
+            <input type="number"><br>
+            지원물품<small>(1인당 5개)</small>
+            <!-- value="3" 초기값3 -->
+            <!-- min="0" 음수 입력 x -->
+            <!-- step="5"한번 눌렀을때 5씩 변화되게 가능.(5의 배수로 증감) -->
+            <input type="number" value="5" min="0" step="5" max="50"><br>
+            희망단계<small>(하,중,상)</small>
+            <!-- type="range" : 범위 형태로 움직임(슬라이더) -->
+            <input type="range" max="3" value="1" min="1"><br>
+            <!-- type="color" : 색상 선택(기본색은 검정) -->
+            <!-- RGB : R(red) G(green) B(blue) 3원색가지고 색상 조합 -->
+            <!-- value="00ff00": 16진수가 2개씩 쌍으로 6개(RGB)> 00~ff -->
+            <input type="color" value="#efdfee"><br>
+        </fieldset>
+    </form>
+</body>
+</html>

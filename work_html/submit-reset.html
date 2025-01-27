@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>메일링 리스트 등록</h3>
+    <!-- post방식으로 register.jsp 호출 -->
+    <!-- ERR_FILE_NOT_FOUND: register.jsp 로 이동하지 못해서 오류 발생 -->
+    <form method="post" action="register.jsp">
+        메일주소1<input type="text"><br>
+        메일주소2<input type="text"><br>
+        <input type="submit" value="제출">
+        <!-- type="reset": 기본값이 초기화 -->
+        <!-- type="reset": form 태그 안에 있는 값을 초기화 -->
+        <!-- <input type="reset"> -->
+        <input type="reset" value="다시입력">
+    </form>
+</body>
+</html>

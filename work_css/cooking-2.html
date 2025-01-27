@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background: #ff6b6b;
+            padding: 10px;
+            /* font-size: 24px; */
+        }
+        header h1{
+            color: white;
+            text-align: center;
+        }
+        footer{
+            background: #ff6b6b;
+            padding: 1px;
+        }
+        footer p{
+            color: white;
+            text-align: center;
+        }
+        section{
+            /* 확대를 했을때 작아지게 , max-width썼다 */
+            max-width: 800px;
+            /* 가운데 정렬 하기 위해 마진은 20px(위아래) auto */
+            margin: 20px auto;
+            /* 배경흰색 */
+            background: white;
+            /* 20 넣으니깐 딱이쁜 패딩 */
+            padding: 20px;
+            /* 10픽셀 정도는 깎아줘야 이쁜 네모 */
+            border-radius: 10px;
+            /* 가로 세로 흐림 (번짐) 색*/
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        input{
+            border: 1px solid #757575;
+            border-radius: 2px;
+        }
+        input[placeholder]{
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>요리 정보</h1>
+    </header>
+    <form>
+        <section id="login">
+            <h2>로그인</h2>
+            아이디<input type="text" placeholder="아이디를 입력하세요">
+            비밀번호<input type="password" placeholder="비밀번호를 입력하세요">
+            <input type="submit" value="로그인">
+        </section>
+        <section id="user">
+            <h2>회원정보</h2>
+            이름<input type="text" placeholder="이름을 입력하세요">
+            이메일<input type="text" placeholder="이메일을 입력하세요">
+            전화번호<input type="text" placeholder="전화번호를 입력하세요">
+            <input type="submit" value="정보수정">
+        </section>
+        <section id="cook">
+            <h2>요리 등록 및 수정</h2>
+            요리 이름<input type="text" placeholder="이름을 입력하세요">
+            재료
+            <textarea placeholder="재료를 입력하세요 " rows="5"></textarea>
+            조리 방법
+            <textarea placeholder="조리 방법을 입력하세요 " rows="5"></textarea>
+            <input type="submit" value="요리 등록">
+        </section>
+    </form>
+    <footer>
+        <p>
+            &copy; 2025 요리 정보 제공 웹사이트
+        </p>
+    </footer>
+</body>
+</html>

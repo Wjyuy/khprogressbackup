@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 100px;
+            /* 글꼴 */
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .shadow1{
+            color: orange;
+            /* text-shadow: 1px 1px; */
+            /* 번짐 정도, 그림자색은 기본값: 번짐정도는 기본값이 0, 그림자색은 글자색 */
+            
+            /* 가로 10px 세로 10px 그림자 */
+            text-shadow: 10px 10px;
+        }
+        .shadow2{
+            /* 첫번째 5px은 오른쪽 */
+            /* 두번째 5px은 아래쪽 */
+            /* 번짐정도: 3px */
+            /* 그림자색 #f00 */
+            /* text-shadow: 5px 5px 3px #f00; */
+
+            /* 첫번째 -5px은 왼쪽 */
+            text-shadow: -5px 5px 3px #f00;
+        }
+        .shadow3{
+            color: #fff;
+            /* 두번째 7px은 아래쪽 */
+            /* text-shadow: 7px 7px 5px #000; */
+
+            /* 두번째 -7px은 윗쪽 */
+            /* text-shadow: 7px -7px 5px #000; */
+
+            /* 번짐을 15px */
+            text-shadow: 7px -7px 15px #000;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="shadow1">HTML5</h1>
+    <h1 class="shadow2">HTML5</h1>
+    <h1 class="shadow3">HTML5</h1>
+</body>
+</html>

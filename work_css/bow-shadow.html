@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            margin: 15px;
+            border: 2px solid black;
+            background: #ffd800;
+            display: inline-block;
+        }
+        .box1{
+            /* 가로 세로 흐림 번짐 그림자색상을 순서대로 적용  */
+            box-shadow: 12px -12px 5px 0px black;
+        }
+        .box2{
+            box-shadow: -12px 12px 15px 10px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

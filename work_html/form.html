@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- method="post" : 통신 방식으로 post -->
+    <!-- action="search.jsp" : 해당 문서로 이동 -->
+    <form method="post" action="search.jsp">
+        <!-- input : 특정 UI항목을 만들때 사용 -->
+        <!-- UI: User Interface(디자인) -->
+        <!-- type="text" : 텍스트 박스 -->
+        <input type="text">
+        
+        <!-- type="submit" 서버로 전송되는 버튼 -->
+        <!-- <input type="submit" > value 없을 경우 제출로 나온다. 아래 두 예시는 동일 -->
+        <!-- <input type="submit" value="제출"> -->
+        <!-- <input type="submit"> -->
+        <!-- 파일에 액세스할 수 없음 > search.jsp파일이 없음 -->
+        <input type="submit" value="검색">
+        
+        <!-- <input type="button" value="검색">은 클릭만 되고 기본 이동은 없다. -->
+        <input type="button" value="검색">
+        
+        
+    </form>
+</body>
+</html>

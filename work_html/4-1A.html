@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>상품 주문서</h1>
+    <form>
+        <fieldset style="width: 310px;">
+            <legend>개인 정보</legend>
+            <p>
+
+                <li>이름<input type="text" placeholder="여백없이 입력" required></li>
+                <li>연락처<input type="tel" placeholder="연락가능한 번호"></li>
+            </p>
+        </fieldset>
+        <fieldset style="width: 310px;">
+            <legend>배송지 정보</legend>
+            <p>
+
+                <li>주소<br>
+                    <input type="text" size="40" required></li>
+                <li>전화번호<input type="tel" required></li>
+            </p>
+        </fieldset>
+        <fieldset style="width: 320px;" >
+            <legend>주문 정보</legend>
+            <p>
+                <li> <input type="checkbox">과테말라 안티구아 (100g)
+                <input type="number" value="0" style="width: 30px;">개</li>
+                <li> <input type="checkbox">인도네시아 만델링 (100g)
+                <input type="number" value="0" style="width: 30px;">개</li>
+                <li> <input type="checkbox">탐라는도다(블렌딩) (100g)
+                <input type="number" value="0" style="width: 30px;">개</li>
+            </p>
+        </fieldset>
+        <div>
+
+            <input type="submit" value="주문하기">
+            <input type="reset" value="다시 작성">
+        </div>
+    </form>
+</body>
+</html>

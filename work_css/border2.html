@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            margin: 15px;
+            /* thick가로적용 thin세로적용 */
+            /* border-width: thick thin; */
+
+            /* top right bottom left 순서대로 적용 */
+            border-width: 5px 10px 15px 20px;
+            display: inline-block;
+            border-style: dashed;
+        }
+        .box1{
+            /* border-style : 선종류 */
+            /* border-style: solid; */
+            border-color: red;
+        }
+        .box2{
+            /* dotted: 점선 */
+            /* border-style: dotted; */
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
