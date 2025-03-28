@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            //keydown : 모든 키를 눌렀을때 발생하는 이벤트 - 키보드이벤트트
+            $(document).on("keydown",keyEventFnc);
+
+            function keyEventFnc(e) {
+                // alert("777");
+                // alert(e.keyCode);
+                //keyCode : 키마다 있는 코드 ( 숫자형태로 나옴 )
+
+                var direct="";
+                switch (e.keyCode) {
+                    case 37: direct="LEFT"; break;
+                    case 38: direct="TOP"; break;
+                    case 39: direct="RIGHT"; break;
+                    case 40: direct="BOTTOM"; break;
+                }
+
+                // if (direct) {
+                    $("#user_id").val(direct);
+                // }
+                //if는 다른 키보드 입력 표시 안하게 하려다 안됨 참고만만
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- 텍스트박스 -->
+    <p>
+        <input tabindex="text" name="user_id" id="user_id">
+    </p>
+
+</body>
+
+</html>

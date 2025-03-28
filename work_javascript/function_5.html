@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arrSubject=["국어","영어","수학"];
+
+        var result= testAvg(arrSubject);
+        function testAvg(arrData) { //arrSubject를 arrData 로 받음 
+            var sum=0;
+            for(var i=0;i<arrData.length;i++){
+                // prompt(arrSubject[i]+"점수는?")
+                // sum += prompt(arrSubject[i]+"점수는?"); //prompt는 문자로 인식
+                sum += Number(prompt(arrSubject[i]+"점수는?"));
+            }
+            // var avg = sum / 3;
+            var avg = sum / arrData.length;
+            return avg;
+        }
+        document.write("평균은 "+result+"점 입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

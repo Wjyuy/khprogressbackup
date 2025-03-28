@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const arr=[1,2,3];
+        // console.log(arr); //(3) [1,2,3]
+        // spread operator
+        console.log(...arr); //...하면 array(3)이 아니라 바로 숫자(123)가 나온다
+        
+        //배열 연결하면서 배열객체로 추가. (arr)
+        const num1=[10,20,30,arr];
+        //배열 연결하면서 배열원소로 추가
+        const num2=[10,20,30,...arr];
+        console.log(num1); //[10, 20, 30, Array(3)]
+        console.log(num2); //[10, 20, 30, 1, 2, 3]
+
+        //배열 중간 추가
+        const num3=[10,20,arr,30]; 
+        const num4=[10,20,...arr,30]; 
+        console.log(num3); //[10, 20, Array(3), 30]
+        console.log(num4); //[10, 20, 1, 2, 3, 30]
+        
+        //배열객체 복사 
+        const num5=[arr]; 
+        console.log(num5); 
+        //배열원소 복사
+        const num6=[...arr]; 
+        console.log(num6); 
+
+        //배열객체 연결
+        const num7=[arr,num1]; 
+        console.log(num7); //[Array(3), Array(4)]
+        //배열원소 연결
+        const num8=[...arr,...num1]; 
+        console.log(num8); [1, 2, 3, 10, 20, 30, Array(3)]
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

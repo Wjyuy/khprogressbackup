@@ -1,0 +1,34 @@
+<%@page import="java.io.File"%>
+<%@page import="magic.board.BoardBean"%>
+<%@page import="magic.board.BoardDBBean"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	int bid=Integer.parseInt( request.getParameter("fileN"));
+	BoardDBBean db= BoardDBBean.getInstance();
+	BoardBean board= db.getFileName(bid);
+	
+	String fileName="";
+	String realFileName="";
+	
+	
+	//첨부파일이 있으면
+	if(board != null){
+		fileName=board.getB_fname();
+		realFileName=board.getB_rfname();
+	}
+	
+	//실제 업로드 되어있는 경로
+	String saveDirectory= application.getRealPath("/upload");
+// 	File.separator : 디렉토리명과 파일명을 연결하는 구분자(운영체제마다 상이할수있음)
+// 	fileName : 넘버링처리된 파일 명 
+	String path= saveDirectory + File.separator + fileName;
+
+	//file : 다운로드 대상 파일
+	File file = new File(path);
+	long length= file.length();
+	//jsp 기본 한글 처리
+	realFileName= new String(realFileName.getBytes("ms949"),"8859_1");
+	
+	response.setCharacterEncoding("application/octet-stream");
+%>

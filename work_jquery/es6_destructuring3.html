@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let list=[
+                    {"num":1,
+                    "title":"hello",
+                    "info":["banana","apple"],
+                    "profile":{"birth":"20201111","img":"http://www.test.com/1"},
+                    },
+                    {"num":2,
+                    "title":"hello",
+                    "info":["melon","orange"],
+                    "profile":{"birth":"20201212","img":"http://www.test.com/2"},
+                    }
+                ];
+        // 2번째 배열원소(json데이터)를 a로 받음
+        // let[,a]=list;
+        // console.log(a);
+        
+        // 2번째 배열원소에서 num,title,info를 받음
+        // let[,{num,title,info}]=list;
+        // console.log(num,title,info);
+
+        //2번째 배열원소에서 info를 받음 
+        // let[,{info:[m1,m2]}]=list;
+        // console.log(m1,m2); 
+
+        //2번째 배열원소에서 profile json데이터의 birth,img값을 받음
+        let[,{profile:{birth,img}}]=list;
+        console.log(birth,img);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var count=0;
+        
+        //호이스팅 기능 사용ㅇ 
+        myFnc(); 
+        
+        //함수 구현
+        function myFnc() { //일반함수
+            count++;
+            document.write("hello"+count,"<br>");
+        }
+        //함수호출
+        myFnc();
+        
+        //익명함수 오출은 오류발생 (호이스팅 X)
+        theFnc();
+        // function theFnc() {
+        var theFnc= function() { //익명함수
+            count++;
+            document.write("bye"+count,"<br>");
+        }
+        theFnc();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

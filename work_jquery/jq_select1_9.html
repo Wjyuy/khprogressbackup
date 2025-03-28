@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script>
+        $(function(){
+            // $("#wrap h1").css({"background-color":"yellow",
+            // "border":"2px dashed #f00"});
+            // wrap 아이디에 있는 h1 아들하위 요소가 대상(손자제외)
+            // $("#wrap > h1").css({"border":"2px dashed #f00"});
+
+            // $("#wrap section").css({"border":"2px dashed #f00"});
+            // 바로 위에 > 없는 애랑 똑같다(상동)
+            // $("#wrap > section").css({"border":"2px dashed #f00"});
+            // children() :자식들 각각 선택
+            $("#wrap > section").children().css({"border":"2px dashed #f00"});
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <section>
+            <h1>하위 요소 선택자</h1>
+            <p>내용2</p>
+        </section>
+    </div>
+</body>
+</html>

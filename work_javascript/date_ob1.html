@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //날짜 객체 생성 => today 참조변수가 가리킴
+        var today= new Date(); //Date 객체는 자바에서도 있음
+
+        //사람은 1-12 월이지만 컴퓨터는 0-11 월을 쓴다
+        //getMonth메소드는 현재 달을 가져오는 기능
+        //getMonth 메소드의 값을 nowMonth변수로 저장
+        var nowMonth= today.getMonth() +1; 
+        //getDate메소드는 현재 일을 가져오는 기능
+        var nowDate= today.getDate() ; 
+        //일 월 화 수 목 금 토 
+        //0  1  2  3  4  5  6
+        var nowDay= today.getDay() ; 
+        //배열 생성(문자 입력할때 따옴표 필요)
+        //배열을 week참조변수로 받음
+        //배열에는 인덱스가 존재(0부터 시작)
+        var week= new Array("일","월","화","수","목","금","토");
+
+        document.write("<h1>오늘 날짜 정보</h1>");
+        document.write(today,"<br>");
+        document.write("현재 월 : "+nowMonth,"<br>");
+        document.write("현재 일 : "+nowDate,"<br>");
+        // document.write("현재 요일 : "+nowDay,"<br>");
+        //배열은 대괄호구나... ()먼저 써 봤다 반성하자
+        document.write("현재 요일 : "+week[nowDay],"<br>");
+
+        // Date 객체를 worldcup 참조변수가 가리킴
+        //컴퓨터가 알아듣는건 0-11이므로 2002,12,30을 넣으면
+        //12월이 아니고 1월로 알아듣는다! 그래서 getMonth에
+        // +1 해줘야 맞게 출력된다.
+        var worldcup= new Date(2002,12,30);
+        var theMonth= worldcup.getMonth() +1;
+        var theDate= worldcup.getDate() ; 
+        var theDay= worldcup.getDay() ; 
+
+        document.write("<h1>월드컵 날짜 정보</h1>");
+        document.write(worldcup,"<br>");
+        document.write("2002년 월드컵 몇 월 : "+theMonth,"<br>"); //12일때 0
+        document.write("2002년 월드컵 몇 일 : "+theDate,"<br>");
+        document.write("2002년 월드컵 요일 : "+week[theDay],"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

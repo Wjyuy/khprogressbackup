@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var arr1 = ["서울", "대전", "대구", "부산"];
+            var arr2 = ["한국", "미국", "일본", "중국"];
+
+            // *.데이터 흐름
+            // java 데이터 주고받고 ->많은 처리 필요(단점) ex>getter,setter
+            // xml 데이터 주고받고 -> 태그(열기/닫기): 단점 ex>server.xml=>context태그
+            // =>(ex><aaa>1</aaa><bbb>2</bbb>)
+            //aaa:1,bbb:2
+            //json 데이터 주고받고 -> "aaa":"1","bbb":"2" (매우 간단하다!!!)
+            //JSON 데이터 ( 키와 값으로 구성 )
+            var obj={"name":"정부장","area":"서울"};
+            // isArray 메소드 : 배열이면 참, 아니면 거짓
+            var okArray1 = $.isArray(arr1);
+            var okArray2 = $.isArray(obj);
+            
+            console.log(okArray1);
+            console.log(okArray2);
+            
+            // inArray 메소드 : 배열의 값을 가지고 인덱스 구함
+            var idxNum= $.inArray("부산",arr1)
+            console.log(idxNum);
+            
+            // arr1 배열이 arr2 배열 뒤에 합쳐짐
+            $.merge(arr2,arr1);
+            console.log(arr2);
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

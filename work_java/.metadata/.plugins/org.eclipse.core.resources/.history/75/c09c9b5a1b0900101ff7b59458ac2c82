@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>java 문자열 검색</p>
+	<p>fn:contains: 문자열 포함 여부</p>
+	<p>Hello, Java Server Pages! => ${fn:contains("Hello, Java Server Pages!")}</p>
+</body>
+</html>

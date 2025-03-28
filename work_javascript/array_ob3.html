@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var greenArr=["교대","방배","강남"];
+        var yellowArr=["미금","오리","죽전"];
+        //인덱스 2에서 1개를 삭제하고 서초,역삼 추가 
+        greenArr.splice(2,1,"서초","역삼");
+        // console.log(greenArr);
+        
+        //pop() : 마지막 인덱스 데이터 삭제 
+        //마지막 배열값인 죽전을 잘라내 data1에 저장
+        var data1= yellowArr.pop(); 
+        //shift() : 첫번째 인덱스 데이터 삭제 
+        //첫번째 배열값인 미금을 잘라내 data2에 저장
+        var data2= yellowArr.shift(); 
+
+        // push():마지막 인덱스에 삽입
+        yellowArr.push(data2); //오리에 미금을 추가
+        //unshift(): 가장 앞의 인덱스에 삽입
+        yellowArr.unshift(data1); //죽전이 오리,미금 앞에 추가
+
+        // console.log(yellowArr);
+        // console.log(data1);
+        console.log(yellowArr);
+        // console.log(data2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

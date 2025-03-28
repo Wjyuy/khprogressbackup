@@ -1,0 +1,17 @@
+<%@page import="magic.board.BoardDBBean"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<jsp:useBean class="magic.board.BoardBean" id="board"></jsp:useBean>
+<jsp:setProperty property="*" name="board"/>
+<%
+	int bid = Integer.parseInt(request.getParameter("b_id"));
+	String cpw = request.getParameter("b_pwd");
+	BoardDBBean db = BoardDBBean.getInstance();
+	if(db.deleteBoard(bid, cpw) == 1){
+		out.print("완");
+		response.sendRedirect("list.jsp");
+	}else{
+		out.print("실");
+		response.sendRedirect("list.jsp");
+	}
+%>

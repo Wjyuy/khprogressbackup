@@ -1,0 +1,13 @@
+package chapter06;
+
+import java.util.Calendar;
+
+public class CalendarEx {
+	public static void printCalendar(String msg,Calendar cal) {
+		int year=cal.get(Calendar.YEAR);
+		System.out.println(year);
+	}
+	public static void main(String[] args) {
+		
+	}
+}

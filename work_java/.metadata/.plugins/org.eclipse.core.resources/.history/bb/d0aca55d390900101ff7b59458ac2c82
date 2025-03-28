@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$.ajax({
+				 url:"js/MOCK_DATA.json"
+				,dataType:"json"
+				,success:function(data){
+// 					data가 있으면
+					if(data.length>0){
+						
+					}
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap"></div>
+</body>
+</html>

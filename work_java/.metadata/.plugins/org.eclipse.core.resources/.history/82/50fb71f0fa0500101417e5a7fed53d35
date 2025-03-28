@@ -1,0 +1,14 @@
+<%@page import="magic.board.BoardDBBean"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<jsp:useBean class="magic.board.BoardBean" id="board"></jsp:useBean>
+<jsp:setProperty property="*" name="board"/>
+<%
+	int cpw = Integer.parseInt(request.getParameter("check_pw"));
+	BoardDBBean db = BoardDBBean.getInstance();
+	if(db.deleteBoard(bid, cpw) == 1){//글쓰기가 정상적으로 완료시
+		response.sendRedirect("list.jsp");
+	}else{//글쓰기가 실패시
+		response.sendRedirect("write.jsp");
+	}
+%>

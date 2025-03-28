@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var today= new Date();
+        //getFullYear 메소드는 현재년도를 가져오는 기능
+        var nowYear = today.getFullYear();
+        var theDate= new Date(nowYear,11,31);
+        var theDateTime= theDate.getTime();
+        var todayTime= today.getTime();
+        var diffDate =theDateTime-todayTime;
+        // var result= diffDate/1000; //초로 계산 ms->s
+        // var result= diffDate/(1000*60); //분으로 계산 s->min
+        // var result= diffDate/(1000*60*60); //시로 계산 min->hour
+        var result= diffDate/(1000*60*60*24); //일로 계산 hour->date 
+        // 337.27876201388887을 정수형 변환
+        //정수형 변환(자바의 int)
+        var result= Math.floor(diffDate/(1000*60*60*24))
+
+        document.write("<h1>오늘부터 올해 연말까지 남은 날짜</h1>")
+        document.write("D-day"+result+"일 남았습니다","<br>")
+        
+        document.write("@#today =>"+today,"<br>");
+        document.write("@#nowYear =>"+nowYear,"<br>");
+        document.write("@#theDate =>"+theDate,"<br>");
+        // 1970년1월1일0시0분0초부터 밀리초로 계산 
+        document.write("@#theDateTime =>"+theDateTime,"<br>");
+        document.write("@#todayTime =>"+todayTime,"<br>");
+        document.write("@#diffDate =>"+diffDate,"<br>");
+        document.write("@#result =>"+result,"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

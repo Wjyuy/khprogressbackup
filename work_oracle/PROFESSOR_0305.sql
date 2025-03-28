@@ -1,0 +1,12 @@
+SELECT * FROM PROFESSOR;
+
+--BONUS : NULL~ 80 까지 존재 
+SELECT *
+  FROM PROFESSOR
+ WHERE POSITION='assistant professor';
+ 
+UPDATE PROFESSOR
+   SET BONUS=200
+ WHERE POSITION='assistant professor';
+ 
+ROLLBACK;

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 네트워크 방식 ( 스크립트 한줄만 추가 하면 된다! ) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    
+    <!-- 제이쿼리 다운로드 방식( 다운받아서 폴더에 넣는다! ) -->
+    <script src="js/jquery.js"></script>
+    <script>
+        //jQuery 기본 형식 
+        $(function(){
+            //$(" : jQuery 선택자 형식(요소,아이디,클래스 등! ))
+            // .css() : jQuery에서 스타일 적용
+            $("#title").css("color","red");
+        });
+    </script>
+</head>
+<body>
+    <h1 id="title">제목</h1>
+</body>
+</html>

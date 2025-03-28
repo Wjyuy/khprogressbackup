@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let obj={"name":"홍길동","age":20};
+        // console.log(obj); //json데이터 
+        // console.log(obj.name); // .하면 속성 
+        // console.log(obj["name"]); //["속성"]해도 된다
+        
+        // let {name}=obj;
+        // console.log(name); //json 데이터의 name 값 
+
+        // let {name,age}=obj;
+        // console.log(name,age);  //json의 name,age값
+
+        // let {...arr}=obj; //가변 변수가 json데이터를 받음 
+        // console.log(arr); 
+
+        let person={"name":"김철수",
+                    "age":30,
+                    "job":["programmer","designer"],
+                    "info":{"id":"kkk123","email":"namer"}
+                };
+        // info 제외하고 데이터 받음
+        // let{name,age,job}=person;
+        // console.log(name,age,job);
+
+        //"name":"김철수"의 김철수를 aaa로받음 
+        // let{name:aaa}=person;
+        // console.log(aaa);
+        
+        // "age":30
+        // "job":["programmer","designer"]
+        //위의 데이터를 bbb,xxx로 받음
+        let{age:bbb,job:xxx}=person;
+        console.log(bbb,xxx);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

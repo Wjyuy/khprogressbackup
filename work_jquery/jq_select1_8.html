@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script>
+        $(function(){
+            // *%1번 형식 (스타일시트 2개 이상 사용할 때 )
+            /* $("#wrap").css("background-color","yellow").
+             css("border","2px dashed #f00"); */
+
+            // *%2번 형식 ( ,대신 : 쓰고 스타일시트 사이에 , 사용 )
+            // $("#wrap").css({"background-color":"yellow",
+            // "border":"2px dashed #f00"});
+            //wrap 아이디에 있는 모든 h1하위 요소가 대상(아들, 손자 등등...)
+            $("#wrap h1").css({"background-color":"yellow",
+            "border":"2px dashed #f00"});
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <section>
+            <h1>하위 요소 선택자</h1>
+            <p>내용2</p>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            //prepend : 맨 앞 위치에 태그 추가 
+            // $("#listZone").prepend("<li>prepend</li>");
+            
+            //prependTo : prepend 와 위치가 반대 
+            $("<li>prependTo</li>").prependTo("#listZone");
+
+            //append : 맨 뒤 위치에 태그 추가
+            // $("#listZone").append("<li>append</li>");
+
+            //appendTo : append 와 위치가 반대
+            $("<li>append</li>").appendTo("#listZone");
+        });
+    </script>
+</head>
+<body>
+    <ul id="listZone">
+        <li>리스트</li>
+    </ul>
+</body>
+</html>

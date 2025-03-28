@@ -1,0 +1,7 @@
+price=int(input("책 값은? "))
+sel=int(input("할인율은? "))
+dev=int(input("배송료는? "))
+print("책 값: %d원"%price)
+print("할인율: %d"%sel)
+print("배송료: %d원"%dev)
+print("결제 금액: %.0f원"%(price-(price*(sel/100))+dev))

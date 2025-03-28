@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<center>
+		<h1>글 삭 제 하 기</h1>
+		<table width="600" cellspacing="0">
+			<tr height="30">
+					<td width="80">암&nbsp;&nbsp;호 </td>
+					<td colspan="3" width="460">
+						<input type="password" name="b_pwd" size="12" maxlength="12">
+					</td>
+				</tr>
+			<tr height="30" align="right">
+				<td align="left" colspan="4">
+					<form method="post" action="delete_ok.jsp">
+						<input type="submit" value="글삭제" >
+					</form>
+				</td>
+			</tr>
+		</table>
+	</center>
+</body>
+</html>

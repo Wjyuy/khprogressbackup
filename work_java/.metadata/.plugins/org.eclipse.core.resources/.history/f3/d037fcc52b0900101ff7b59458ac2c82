@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		function sendRequest() {
+			var httpRequest= new XMLHttpRequest();
+// 			open : 전송방식, 호출대상
+			httpRequest.open("POST","request_ajax.jsp",true);
+// 			setRequestHeader : 기본 컨텐트 타입 설정(인코딩 기본)
+			httpRequest.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

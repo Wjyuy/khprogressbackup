@@ -1,0 +1,9 @@
+package backjoon;
+
+import java.util.Scanner;
+
+public class q_1000 {
+	Scanner scanner = new Scanner(System.in);
+	int num1= scanner.nextInt();
+	int num2= scanner.nextInt();
+}

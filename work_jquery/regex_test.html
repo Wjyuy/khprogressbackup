@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        const regex=/abc/;
+        document.write(regex);
+        document.write("<br>");
+
+        const regex2=new RegExp("abc");
+        document.write(regex2);
+        document.write("<br>");
+
+        const regex3=new RegExp(/abc/);
+        document.write(regex3);
+        document.write("<br>");
+        
+        const regex4=/apple/;
+        const regex5=/apple2/;
+        const regex6=new RegExp("banana2");
+        const regex7=new RegExp(/banana/);
+        
+        //apple 단어를 찾으면 true 
+        var a1 = regex4.test("Hello banana and apple hahahaha");
+        document.write(a1);
+        document.write("<br>");
+        
+        //apple2 단어를 못 찾으면 false
+        var a2 = regex5.test("Hello banana and apple hahahaha");
+        document.write(a2);
+        document.write("<br>");
+        
+        //banana2 단어를 못 찾으면 false
+        var a3 = regex6.test("Hello banana and apple hahahaha");
+        document.write(a3);
+        document.write("<br>");
+        
+        //banana 단어를 찾으면 true 
+        var a4 = regex7.test("Hello banana and apple hahahaha");
+        document.write(a4);
+        document.write("<br>");
+        */
+       /*
+       const regex1=/apple/;
+       const txt = "Hello banana and apple hahahaha apple";
+
+       //apple을 찾으면 apple 이출력됨 , 없으면 null
+       var a1 = txt.match(regex1);
+       document.write("@# a1=>"+a1);
+       document.write("<br>");
+
+       var a2 = txt.match(/apple/);
+       document.write("@# a2=>"+a2);
+       document.write("<br>");
+
+       //apple 이 두개 있으니까 두개 나옴
+       //g : 모든 패턴을 검색
+       var a3 = txt.match(/apple/g);
+       document.write("@# a3=>"+a3);
+       document.write("<br>");
+
+       //txt 안에 첫번째 apple 이 watermelon 으로 바뀌어서 나옴
+       let a4 = txt.replace(regex1,"watermelon");
+       document.write("@# a4=>"+a4);
+       document.write("<br>");
+
+       // 줄바꿈이 포함된 3줄 문자열 (console.log만 세줄로 표시됨)
+       const str="Hello World and \n Power Hello?\n Power Overwhelming!!! "
+       document.write("@# str1=>"+str);
+       //콘솔에서는 \n 이 적용됨
+       console.log("@# str2=>"+str);
+       document.write("<br>");
+
+       const str11="Hello World and Power Hello? Power Overwhelming!!! "
+       document.write("@# str11=>"+str);
+       console.log("@# str12=>"+str);
+       document.write("<br>");
+       
+       //    let a5=str.match(/Hello/);
+       //    let a5=str.match(/World/);
+       // ^ 문자는 문장 시작점을 의미 ( Hello 로 시작하니 찾고, World 는 못찾음)
+       //    let a5=str.match(/^World/);
+       let a5=str.match(/^Hello/);
+       
+       document.write("@# a5=>"+a5);
+       document.write("<br>");
+
+       const str21="abcABC";
+    //    let a6=str21.match(/a/); // a
+    //    let a6=str21.match(/a/i); // a (i : 대소문자 구분 x)
+       let a6=str21.match(/a/gi); // a (gi :모든 패턴에서 대소문자 구분 x)
+       document.write("@# a6=>"+a6);
+       document.write("<br>");
+
+       let a7="kokokoko".match(/ko/);
+       document.write("@# a7=>"+a7);
+       document.write("<br>");
+
+       //    let a8="kokokoko".match(/ko+/);
+       //"o"만 + 를 적용 (o가 여러개)
+       let a8="kooookoooo".match(/ko+/);
+       //그래서 koooo 이렇게 하면 koooo를 찾음 (ooooo여러개 찾는다)
+       document.write("@# a8=>"+a8);
+       document.write("<br>");
+
+       //kokokoko,ko : ko 를 그룹화해서 찾음(정규식 그룹화)
+       let a9="kokokoko".match(/(ko)+/);
+       document.write("@# a9=>"+a9);
+       document.write("<br>");
+       
+       const str22="그래픽 카드 a급 제품 재고량은 10개 입니다. 011-8821-1예0로 연락 주시길 바랍니다. Thank you~!";
+       document.write("@# str22=>"+str22);
+       document.write("<br>");
+
+       //첫번째 다를 찾음
+       let a11=str22.match(/다/);
+       document.write("@# a11=>"+a11);
+       document.write("<br>");
+
+       let a12=str22.match(/다/g);
+       document.write("@# a12=>"+a12);
+       document.write("<br>");
+
+       let a13=str22.match(/그래픽 카드/g);
+       document.write("@# a13=>"+a13);
+       document.write("<br>");
+
+    //    /[a0드]/g : or로 다 찾음 =>드,a,0,0,0,a
+       let a14=str22.match(/[a0드]/g);
+       document.write("@# a14=>"+a14);
+       document.write("<br>");
+
+       //숫자0~9를 모두 찾음
+       let a15=str22.match(/[0-9]/g);
+       document.write("@# a15=>"+a15);
+       document.write("<br>");
+
+       //숫자 0~9가 아닌 것을 모두 찾는다
+       //[]안에서 ^을 앞에 쓰면 , NOT(부정)의 기능을 한다 
+       let a16=str22.match(/[^0-9]/g);
+       document.write("@# a16=>"+a16);
+       document.write("<br>");
+
+       //영어알파벳 대문자/소문자를 모두 찾는다
+       let a17=str22.match(/[a-zA-Z]/g);
+       document.write("@# a17=>"+a17);
+       document.write("<br>");
+
+       //한글,영문,숫자,공백 모두 포함
+       let a18=str22.match(/[가-힣\w\s]/g);
+       document.write("@# a18=>"+a18);
+       document.write("<br>");
+
+       //한글,영문,숫자,공백을 제외한 '특수문자' 만 찾는다
+       let a19=str22.match(/[^가-힣\w\s]/g);
+       document.write("@# a19=>"+a19);
+       document.write("<br>");
+       */
+      /*
+        const str1="I am a student.";
+        // let a1=str1.match(/m/g); //m
+        // let a1=str1.match(/^m/g); //null : m으로 시작하는 것 (문장에서)
+        // let a1=str1.match(/^I/g); //I
+        let a1=str1.match(/^s/g); //null 
+        document.write("@# a1=>"+a1);
+        document.write("<br>");
+
+        // let a2=str1.match(/student/g);
+        // let a2=str1.match(/student$/g); // $ : 끝나는 것(.으로 끝나면 또 못찾음)
+        // let a2=str1.match(/student.$/g); // @# a2=>student.
+        let a2=str1.match(/t.$/g); // @# a2=>t.
+        document.write("@# a2=>"+a2);
+        document.write("<br>");
+
+        const str2="This is $24$"
+        //@# a3=>$,$ : 특수문자 $를 global 하게 다 찾음 (\이용)
+        let a3=str2.match(/\$/g); 
+        document.write("@# a3=>"+a3);
+        document.write("<br>");
+
+        //.(점) : 문자, 공백, 특수문자 등의 모든 텍스트
+        let a4=str2.match(/./g); 
+        document.write("@# a4=>"+a4);
+        document.write("<br>");
+
+        //... :  3개를 한개의 단위로 선택
+        // . 의 갯수로 여러단위 선택 가능
+        let a5=str2.match(/.../g); 
+        document.write("@# a5=>"+a5);
+        document.write("<br>");
+        */
+       
+       const str1="abcdefghijklmnopqrstuvwxyz.ABCDEFGHIJKLMNOPQRSTUVWXYZ.123456789";
+    // 숫자만 출력
+    //    let a1=str1.match(/[1-9]/g); 
+    // 소문자만 출력
+    //    let a1=str1.match(/[a-z]/g); 
+    // 대문자만 출력
+    //    let a1=str1.match(/[A-Z]/g); 
+    // 소문자부터 대문자까지 출력
+    //    let a1=str1.match(/[A-z]/g); 
+    // 소문자 x ~ z 까지 (x y z  출력)
+    //    let a1=str1.match(/[x-z]/g); 
+    //^(캐럿)을 붙여서 부정(제외)의 뜻
+       let a1=str1.match(/[^x-z]/g); 
+       document.write("@# a1=>"+a1);
+       document.write("<br>");
+       
+       const str2="Sunday Monday MonMonMonday Tuesday Wednesday Thursday Friday Saturday";
+    
+    //    let a2=str2.match(/(Mon)/g);  // Mon,Mon,Mon,Mon :  Mon 을 모두 출력 
+    //    let a2=str2.match(/(Mon|Tue)/g); // Mon,Mon,Mon,Mon,Tue : Mon or Tue 모두 출력 
+    //    let a2=str2.match(/(Mon|Tues)/g);
+
+    // * : *앞에 입력된 문자가 있거나 없을 경우 (day 만 나오던가, Mon을 붙여 나오던가)
+    //    let a2=str2.match(/(Mon)*day/g); //day,Monday,MonMonMonday,day,day,day,day,day
+    // + : +앞에 입력된 문자가 하나에서 여러개 (최소 하나)
+    //    let a2=str2.match(/(Mon)+day/g); //Monday,MonMonMonday
+    // ? : ?앞에 입력된 문자가 없거나 하나인 경우 (최대 하나 )
+       let a2=str2.match(/(Mon)?day/g); //day,Monday,Monday,day,day,day,day,day
+
+       document.write("@# a2=>"+a2);
+       document.write("<br>");
+       
+       const str3="Sing song when I'm walking home i g";
+    //    let a3=str3.match(/[a-z]/g);
+    // 3개 이상 알파벳을 3개만 출력
+    // {} : 숫자로 단위를 표현하여 선택
+    //    let a3=str3.match(/[a-z]{3}/g);
+    // 3개 이상 알파벳을 출력
+    // {n,} : 뒤의 인자를 비워두면 n개 이상을 의미
+    //    let a3=str3.match(/[a-z]{3,}/g); //ing,song,when,walking,home
+    // 1개이상 3개이하 알파벳
+    //{n,m} 앞에 입력된 문자가 n개 이상 m개 이하 
+    //    let a3=str3.match(/[a-z]{1,3}/g);
+    //    let a3=str3.match(/[al]{1,2}/g); //al
+    //    let a3=str3.match(/[ng]{1,2}/g); //ng,ng,n,ng,g
+    //\w : 모든 문자[A-z0-9]와 _(언더바)까지 포함
+    //    let a3=str3.match(/\w/g); //S,i,n,g,s,o,n,g,w,h,e,n,I,m,w,a,l,k,i,n,g,h,o,m,e,i,g
+    // \W 대문자 W는 w와 반대 의미
+       let a3=str3.match(/\W/g); //,,,,,,,
+       document.write("@# a3=>"+a3);
+       document.write("<br>");
+       
+       const str4="DingZong 12345696";
+       //\d : 숫자를 의미 (\D 는 반대의 의미)
+    //    let a4=str4.match(/\d/g); //1,2,3,4,5,6,9,6
+       let a4=str4.match(/\D/g); //D,i,n,g,Z,o,n,g,
+       document.write("@# a4=>"+a4);
+       document.write("<br>");
+       
+       //*.정규식 실무 예제
+       //1. 특정 단어로 끝나는지 검사
+      // const txt="index.html";
+      const txt="index.html2"; // null : 2로 끝나기 때문 
+      let a11=txt.match(/html$/g);
+      document.write("@# a11=>"+a11);
+      document.write("<br>");
+      
+      //2. 숫자로만 이루어져 있는지 검사
+      // const txt2="12345";
+      const txt2="12345a";
+      // let a12=txt2.match(/^\d+$/g); //12345 일때 -> 12345
+      let a12=txt2.match(/^\d+$/g); //12345a 일때 -> null (숫자 아닌게 하나라도 들어갈 시)
+      document.write("@# a12=>"+a12);
+      document.write("<br>");
+      
+      //3. 아이디 사용 검사
+      // 알파벳 대소문자 또는 숫자로 시작하고 끝나며 4~10 자리인지 검사
+      // const txt3="abc1"; //통과 : abc1
+      // const txt3="abc"; //통과X : null (회원가입 튕기게 활용 가능)
+      // const txt3="abcd123456"; //통과 : abcd123456
+      const txt3="abcd12*456"; //통과x : null
+      let a13=txt3.match(/^[A-Za-z0-9]{4,10}$/g);
+      document.write("@# a13=>"+a13);
+      document.write("<br>");
+      
+      //4. 핸드폰 변호 형식
+      //3자리 + 하이픈 (-) + 3,4자리 + 하이픈(-) + 4자리
+      // const txt4="010-1234-5678"; // 통과 : 010-1234-5678
+      // const txt4="010-123-5678"; // 통과 : 010-123-5678
+      const txt4="010-12-5678"; // 통과X : null 
+      let a14=txt4.match(/^\d{3}-\d{3,4}-\d{4}$/g);
+      document.write("@# a14=>"+a14);
+      document.write("<br>");
+      
+      //5. 웹사이트 주소 형식
+      // http:// 나 https:// 로 시작하고 알파벳, 하이픈(-),dot(.)으로 이루어져 있는 정규식
+      // http://dogumaster.com,https://google.com : 두개를 찾았다! 
+      const txt5="http://dogumaster.com 010-1111-2222 02-333-7777 curryyou@aaa.com https://google.com";
+      let a15=txt5.match(/https?:\/\/[\w\-\.]+/g);
+      document.write("@# a15=>"+a15);
+      document.write("<br>");
+      
+      //6.전화번호 형식 
+      //유선번호라면 02-111-2222형식이고, 핸드폰번호라면 010-1111-2222 형식을 모두 포함하는 정규식
+      //010-1111-2222,02-333-7777 : 유선 무선 둘다 출력! 
+      const txt6="http://dogumaster.com 010-1111-2222 02-333-7777 curryyou@aaa.com https://google.com";
+      let a16=txt6.match(/\d{2,3}-\d{3,4}-\d{4}/g);
+      document.write("@# a16=>"+a16);
+      document.write("<br>");
+      
+      //7. 이메일주소 형식
+      // xxx@xxxx.com 등의 형식 
+      // curryyou@aaa.com : 만 나온다! 
+      const txt7="http://dogumaster.com 010-1111-2222 02-333-7777 curryyou@aaa.com https://google.com";
+      let a17=txt7.match(/[\w\-\.]+\@[\w\-\.]+/g);
+      document.write("@# a17=>"+a17);
+      document.write("<br>");
+      
+      //8.특수 기호 
+      //문자와 숫자가 아닌것
+      //$,#,*
+      const txt8="abCD$94#높*ㅍ";
+      let a18=txt8.match(/[^a-zA-Z0-9가-힣ㄱ-ㅎ]/g);
+      document.write("@# a18=>"+a18);
+      document.write("<br>");
+
+       </script>
+</head>
+<body>
+    
+</body>
+</html>

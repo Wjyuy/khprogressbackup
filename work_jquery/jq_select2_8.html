@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var arr1 = ["서울", "대전", "대구", "부산"];
+            //map 메소드 :arr1배열에서 value로 배열값을 가져오고, index로 인덱스 가져옴
+            var arr2 = $.map(arr1, function (value, index) {
+                // return value; //(4) ['서울','대전','대구','부산']
+                // return index; //(4)[0,1,2,3]
+                // return true; //[true, true, true, true]
+                // return false; //[false, false, false, false]
+                if (index == 1) {
+                    return value; //['대전']
+                }
+            });
+            console.log(arr2);
+            console.log("=== First End ===");
+
+            // grep 메소드 : 참 / 거짓을 이용해서 출력( map 과 다르다 )
+            var arr3 = $.grep(arr1, function (a, b) {
+                // return a; 
+                if (a =="부산") {
+                    return true; //['부산']
+                } else {
+                    return false;
+                }
+            });
+            console.log(arr3); //(4) ['서울','대전','대구','부산']
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

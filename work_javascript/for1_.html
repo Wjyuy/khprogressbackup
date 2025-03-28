@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 초기값;조건식;증감식
+        /*
+        for(var i=1;i<=20;i++){
+            if(i==15){
+                break;
+            }
+            // 14까지만 출력
+            document.write(i,"<br>");
+        }
+        var i=1; //밖으로 초기값 선언을 빼도 동작한다
+        for(;i<=20;i++){
+            if(i==15){
+                break;
+            }
+            document.write(i,"<br>");
+        }
+        var i=1;
+        for(i;true;i++){
+            if(i==115){
+                break;
+            } //114까지만 출력 
+            document.write(i,"<br>");
+        }
+        */
+       var i=1;
+       //i+=2 -> 초기값이 1이라서 홀수만 출력
+        for(;true;i+=2){
+            if(i==115){
+                break;
+            }  
+            document.write(i,"<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #draggable{
+            left: 50px;
+            top: 50px;
+            position: absolute;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <!-- 제이쿼리 플러그인 연동 -->
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            $("#draggable").draggable();
+        });
+    </script>
+</head>
+<body>
+    <div id="draggable">
+        <img src="images/pic_1.jpg">
+    </div>
+</body>
+</html>

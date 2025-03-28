@@ -1,0 +1,19 @@
+grade=input("등급을 입력해 주세요(A+,A,B+,...,F) : ")
+if grade=="A+":
+    print("등급:%s, 평점:4.5"%grade)
+if grade=="A":
+    print("등급:%s, 평점:4.0"%grade)
+if grade=="B+":
+    print("등급:%s, 평점:3.5"%grade)
+if grade=="B":
+    print("등급:%s, 평점:3.0"%grade)
+if grade=="C+":
+    print("등급:%s, 평점:2.5"%grade)
+if grade=="C":
+    print("등급:%s, 평점:2.0"%grade)
+if grade=="D+":
+    print("등급:%s, 평점:1.5"%grade)
+if grade=="D":
+    print("등급:%s, 평점:1.0"%grade)
+if grade=="F":
+    print("등급:%s, 평점:0"%grade)

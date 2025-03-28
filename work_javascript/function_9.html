@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //익명함수(즉시실행함수) : 각각 호출되어서 실행( 여러번 실행 됨 ! )
+        (function () {
+            var num=100;
+            function menu() {
+                num +=100;
+                console.log("@# num1==>"+num);
+            }
+            // @# num1==>200 문제없다! (function)안에function 특이하게 생김김
+            menu();
+        }());
+        (function () {
+            var num=100;
+            function menu() {
+                num +=100;
+                console.log("@# num2==>"+num);
+            }
+            menu();
+        }());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            //open : 사용자 정의 함수, eventType,message : 매개변수
+            //open, eventType,message: 다른이름으로 사용해도됨 !
+            $.fn.open=function(eventType,message){
+                //this : 버튼1 or 버튼2
+                var ts = $(this);
+                //each : ts 객체에 크기만큼 반복 (여기서는 버튼 이벤트 발생시 한번 실행)
+                $.each(ts,function(i,o){
+                    // 매개변수 eventType이름을 맞추어서 해당 이벤트 발생시 실행
+                    $(o).on(eventType,function(){
+                        //매개변수 message를 출력
+                        alert(message);
+                    });
+                });
+            }
+            $(".btn1").open("mouseover","welcome!");
+            $(".btn2").open("click","hello!");
+        });
+    </script>
+</head>
+<body>
+    <p><button class="btn1">버튼1</button></p>
+    <p><button class="btn2">버튼2</button></p>
+</body>
+</html>

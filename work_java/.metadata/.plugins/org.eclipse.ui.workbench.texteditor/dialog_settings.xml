@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<section name="java.lang.Class">
+		<item key="selection" value="insert"/>
+		<item key="replaceBarOpen" value="true"/>
+		<list key="findhistory">
+			<item value="random"/>
+			<item value="insert"/>
+			<item value="Update"/>
+			<item value="update"/>
+			<item value="re"/>
+			<item value="Re"/>
+			<item value="ResultSet"/>
+			<item value="upload.getRequest()"/>
+			<item value="get"/>
+		</list>
+		<list key="replacehistory">
+			<item value="time"/>
+			<item value="op"/>
+			<item value="장"/>
+			<item value="쟝"/>
+			<item value="kospy"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="724"/>
+		<item key="DIALOG_Y_ORIGIN" value="392"/>
+	</section>
+</section>

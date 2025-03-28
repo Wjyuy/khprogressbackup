@@ -1,0 +1,17 @@
+package chapter06;
+
+import java.util.Calendar;
+
+public class CalendarEx {
+	public static void printCalendar(String msg,Calendar cal) {
+		int year=cal.get(Calendar.YEAR);
+		
+		System.out.println(msg+""+year);
+	}
+	public static void main(String[] args) {
+//		abstract class는 new연산자로 객체생성 불가
+//		new Calendar();
+		Calendar now= Calendar.getInstance();
+		printCalendar("현재", now);
+	}
+}

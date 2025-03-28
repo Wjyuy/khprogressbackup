@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=1;
+        {
+            var a=2;
+            var b=3;
+        }
+        var a=3;
+        // 1->2
+        // 2->3 (var : 마지막 숫자가 반영.var는 다 한몸인가봄)
+        console.log("@# a=>"+a);
+        console.log("@# b=>"+b);
+        
+        let aa=1; //전역변수
+        {
+            let aa=2; //지역변수(함수라고 생각)
+            let bb=3;
+            console.log("@# bb=>"+bb); //오 여기서는 출력 됨!
+        }
+        // 1->1 (var 랑 다르다. let: 지역변수에 영향을 안 받음)
+        console.log("@# aa=>"+aa); //전역변수
+        // console.log("@# bb=>"+bb); //지역변수 밖에서 해서 오류 나온다
+        
+        const x=1; 
+        // x=2; //오류. Assignment to constant variable.(재할당이 안됨)
+        console.log("@# x=>"+x);
+
+        //json이랑비슷
+        const employee={name:"hong",age:24}
+        // employee{} 오류 :(객체는 변경 불가)
+        // employee.name="kim"; //속성의 값은 변경 가능하다!
+        console.log(employee);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

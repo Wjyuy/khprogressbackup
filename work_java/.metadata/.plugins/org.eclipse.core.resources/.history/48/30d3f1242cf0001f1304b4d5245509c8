@@ -1,0 +1,14 @@
+package chapter06;
+
+public class StringBufferEx {
+	public static void main(String[] args) {
+		StringBuffer sb=new StringBuffer("This");
+		System.out.println(sb);
+		
+		sb.append(" is pencil"); //append(): 문자열을 연결(추가되면서 수정됨)
+		System.out.println(sb); //Thisis pencil
+		
+		sb.insert(7, "my");
+		System.out.println(sb);
+	}
+}

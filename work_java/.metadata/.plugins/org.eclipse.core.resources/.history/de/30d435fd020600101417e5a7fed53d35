@@ -1,0 +1,41 @@
+<%@page import="magic.board.BoardDBBean"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<jsp:useBean class="magic.board.BoardBean" id="board"></jsp:useBean>
+<jsp:setProperty property="*" name="board"/>
+<%
+	int bid = Integer.parseInt(request.getParameter("b_id"));
+	String b_pwd = request.getParameter("b_pwd");
+	
+	BoardDBBean db = BoardDBBean.getInstance();
+	//글삭제를 위해 글번호와 비밀번호로 메소드호출
+	int re =db.deleteBoard(bid,b_pwd);
+	
+	if(re==1){
+		//비밀번호 일치로 글목록 이동
+		%>
+			<script>
+				alert("글이 삭제되었습니다!");
+// 				history.go(-3); 얘는 쓰면 새로고침안된 상태라 안되겠다 
+			</script>
+		<%
+		response.sendRedirect("list.jsp");
+// 		out.print("삭제되었습니다");
+	}else if(re==0){
+		//비밀번호 틀림
+		%>
+			<script>
+				alert("비밀번호가 맞지 않습니다.");
+				history.go(-1);
+			</script>
+		<%
+	}else if(re==-1){
+		%>
+			<script>
+				alert("삭제에 실패하였습니다.");
+				history.go(-1);
+			</script>
+		<%
+		
+	}
+%>
